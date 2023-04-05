@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --first-bg: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --first-color: #a1c4fd;
+}
+body {
+    height: 100vh;
+    background-image: var(--first-bg);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.inputs {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+    width: 40%;
+}
+
+.inputs input {
+    padding: .5rem;
+    border: 1px solid var(--first-color);
+    outline: none;
+}
+.inputs button {
+    background-image: var(--first-bg);
+    border: none;
+    color: #fff;
+    padding: .5rem .3rem;
+    cursor: pointer;
+} 
+.inputs button:active {
+    transition: all 1s ease;
+    color: var(--first-color);
+}
+.inputs :is(input, button) {
+    width: 87%;
+}
+.boxs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxs > .box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: .3rem;
+    text-align: center;
+    width: 30%;
+}
+.boxs > .box > h2 {
+    margin-bottom: .5rem;
+}
+.boxs .box > p {
+    background-image: var(--first-bg);
+    margin: .3rem;
+    color: #fff;
+    padding: .4rem;
+    cursor: move;
+}
+.boxs .box > p:active {
+    cursor: grab;
+}
